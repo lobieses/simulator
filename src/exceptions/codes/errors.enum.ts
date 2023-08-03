@@ -1,0 +1,17 @@
+export enum Errors {
+    ERROR_CODE_UNDEFINED = 0,
+
+    INVALID_ARGUMENT = 3,
+
+    NOT_FOUND = 5,
+
+    ALREADY_EXIST = 6,
+
+    PERMISSION_DENIED = 7,
+
+    INTERNAL_ERROR = 13,
+
+    UNAVAILABLE = 14,
+
+    UNAUTHENTICATED = 16,
+}

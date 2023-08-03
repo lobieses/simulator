@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  popsicle:
+    external: true
+
+services:    
+  # popsicle-nodejs:
+  #   image: 'node:18'
+  #   ports:
+  #     - ${APP_PORT}:${APP_PORT}
+  #   container_name: popsicle-nodejs
+  #   volumes:
+  #     - ./:/app
+  #   env_file:
+  #       - .env
+  #   working_dir: /app
+  #   command: npx nodemon --config nodemon.json
+  #   networks:
+  #     - popsicle
+
+  popsicle-redis:
+    container_name: popsicle-redis
+    image: "redis:alpine"
+    ports:
+      - 6379:6379
+    networks:
+      - popsicle
+    volumes:
+        - ./docker/redis/data:/data
+    
